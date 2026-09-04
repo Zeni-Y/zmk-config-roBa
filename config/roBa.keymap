@@ -110,7 +110,7 @@
         ARROW {
             bindings = <
 &kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans
+&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp BACKSPACE
 &kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans
 &trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                                                  &trans
             >;
