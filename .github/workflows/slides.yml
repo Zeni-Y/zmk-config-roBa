@@ -65,12 +65,13 @@ jobs:
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           cp dist/slides/roBa-guide.pdf docs/slides/roBa-guide.pdf
-          if git diff --quiet -- docs/slides/roBa-guide.pdf; then
+          git add docs/slides/roBa-guide.pdf
+          # 未追跡ファイルも拾えるよう、ステージ済みの差分で判定する
+          if git diff --cached --quiet; then
             echo "PDF is unchanged; nothing to commit."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/slides/roBa-guide.pdf
           git commit -m "[Slides] Update roBa-guide.pdf"
           git push

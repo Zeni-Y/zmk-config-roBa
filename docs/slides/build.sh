@@ -19,12 +19,14 @@ mkdir -p "$OUT_DIR"
 cd "$REPO_ROOT"
 
 # MARP_BIN を指定するとその実行ファイルを使う（例: グローバルインストール済みの marp）。
+# --no-stdin と </dev/null: 標準入力が TTY でない環境（CI やスクリプト内）で
+# marp-cli が stdin の入力を待ち続けて止まるのを防ぐ。
 marp() {
   if [ -n "${MARP_BIN:-}" ]; then
-    "$MARP_BIN" --theme-set "$SLIDES_DIR/themes" --html --allow-local-files "$@"
+    "$MARP_BIN" --no-stdin --theme-set "$SLIDES_DIR/themes" --html --allow-local-files "$@" </dev/null
   else
-    npx -y "@marp-team/marp-cli@${MARP_CLI_VERSION}" \
-      --theme-set "$SLIDES_DIR/themes" --html --allow-local-files "$@"
+    npx -y "@marp-team/marp-cli@${MARP_CLI_VERSION}" --no-stdin \
+      --theme-set "$SLIDES_DIR/themes" --html --allow-local-files "$@" </dev/null
   fi
 }
 
