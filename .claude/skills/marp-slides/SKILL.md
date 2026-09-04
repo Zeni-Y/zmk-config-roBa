@@ -25,7 +25,7 @@ GitHub Actions（`.github/workflows/slides.yml`）が PDF / HTML を生成し、
 
    ```bash
    mkdir -p dist/slides
-   npx -y @marp-team/marp-cli@4.5.0 docs/slides/roBa-guide.md --theme-set docs/slides/themes \
+   npx -y @marp-team/marp-cli@4.5.0 --no-stdin docs/slides/roBa-guide.md --theme-set docs/slides/themes \
      --html --allow-local-files --images png -o dist/slides/roBa-guide.png
    # dist/slides/roBa-guide.001.png ... を画像として開いて確認
    ```

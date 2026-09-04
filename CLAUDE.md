@@ -31,7 +31,7 @@ roBa（トラックボール付き分割キーボード）用の ZMK ファー�
   ```bash
   ./docs/slides/build.sh                 # dist/slides/ に PDF と HTML
   # レイアウト崩れを目視確認するときは 1 枚ずつ PNG にする
-  npx -y @marp-team/marp-cli@4.5.0 docs/slides/roBa-guide.md --theme-set docs/slides/themes \
+  npx -y @marp-team/marp-cli@4.5.0 --no-stdin docs/slides/roBa-guide.md --theme-set docs/slides/themes \
     --html --allow-local-files --images png -o dist/slides/roBa-guide.png
   ```
 
