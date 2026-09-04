@@ -1,0 +1,5 @@
+# Marp CLI の設定（リポジトリ直下で `npx @marp-team/marp-cli docs/slides/roBa-guide.md` を
+# 実行したときに使われる）。CI とローカルの共通ビルドは docs/slides/build.sh を使う。
+themeSet: docs/slides/themes
+html: true
+allowLocalFiles: true

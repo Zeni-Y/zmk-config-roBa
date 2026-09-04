@@ -9,6 +9,8 @@ Keymap Editor での編集方法、`.keymap` の読み書きに必要な基本�
 
 > **一言でまとめると: ZMK Studio は試す場所、GitHub の `roBa.keymap` は残す場所。**
 
+> 📄 **スライド版（PDF）**: この README を図・表中心に再構成したスライドを [`docs/slides/roBa-guide.pdf`](docs/slides/roBa-guide.pdf) に置いています（`main` への push 時に GitHub Actions が自動更新）。原稿は [`docs/slides/roBa-guide.md`](docs/slides/roBa-guide.md)、作り方は [`docs/slides/README.md`](docs/slides/README.md) を参照してください。
+
 ---
 
 ## 目次
@@ -48,9 +50,13 @@ zmk-config-roBa/
 ├── keymap-drawer/
 │   ├── roBa.svg           ← 上に表示しているキーマップ図
 │   └── roBa.yaml          ← 図の生成に使う中間ファイル
+├── docs/slides/
+│   ├── roBa-guide.md      ← この README のスライド版（Marp 原稿）
+│   └── roBa-guide.pdf     ← 生成された PDF（Actions が自動更新）
 └── .github/workflows/
     ├── build.yml          ← push ごとにファームウェアをビルド
-    └── draw.yml           ← キーマップ図を再生成（手動実行）
+    ├── draw.yml           ← キーマップ図を再生成（手動実行）
+    └── slides.yml         ← スライドを PDF 化して commit
 ```
 
 普段編集するのは次の 3 つだけです。
